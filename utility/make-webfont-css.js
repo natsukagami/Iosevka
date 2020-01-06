@@ -9,11 +9,23 @@ module.exports = function(output, family, hs, formats) {
 		ans += `
 @font-face {
 	font-family: '${family + " Web"}';
+	font-display: swap;
 	font-weight: ${term.cssWeight};
 	font-style: ${term.cssStyle};
 	src: ${src};
 }
 `;
+		if (term.cssStyle === "oblique") {
+			// CHROME hates a family with both Italic and Oblique
+			ans += `
+@font-face {
+	font-family: '${family + " Web Oblique"}';
+	font-display: swap;
+	font-weight: ${term.cssWeight};
+	src: ${src};
+}
+`;
+		}
 	}
 	fs.writeFileSync(output, ans);
 };
