@@ -4,3 +4,8 @@ design = ["sans", "ligset-fs", "cv02", "cv03", "cv07", "cv11", "cv13", "cv17", "
 upright = []
 italic = []
 oblique = []
+
+[buildPlans.iosevka-kagami]
+family = "Iosevka Kagami"
+design = ["sans", "termlig", "cv02", "cv03", "cv07", "cv11", "cv13", "cv17", "cv18", "cv21", "cv22", "cv25", "cv29", "cv32", "cv35", "cv37", "cv39", "cv40", "cv42", "cv45", "cv47", "cv48", "cv51", "cv52", "cv62"]
+
